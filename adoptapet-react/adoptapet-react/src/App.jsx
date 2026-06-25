@@ -37,6 +37,9 @@ function App() {
     return cumpleFiltroEspecie && cumpleBusqueda
   })
 
+  // Contar mascotas con adopción urgente
+  const mascotasUrgentes = mascotas.filter(mascota => mascota.adopcionUrgente).length
+
   return (
     <div className="app-container">
       <header className="app-header">
@@ -45,6 +48,15 @@ function App() {
       </header>
 
       <main className="app-main">
+        {/* Banner de adopción urgente */}
+        {mascotasUrgentes > 0 && (
+          <div className="banner-urgente">
+            <p className="banner-urgente-texto">
+              🚨 ¡ATENCIÓN! Hay <strong>{mascotasUrgentes} mascota{mascotasUrgentes !== 1 ? 's' : ''}</strong> que necesita{mascotasUrgentes !== 1 ? 'n' : ''} adopción urgente
+            </p>
+          </div>
+        )}
+
         {/* Sección de filtros */}
         <div className="filtros-container">
           {/* Filtro por especie */}

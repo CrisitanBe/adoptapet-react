@@ -21,6 +21,7 @@ const ListaMascotas = ({ mascotas }) => {
           especie={mascota.especie}
           descripcion={mascota.descripcion}
           caracteristicas={mascota.caracteristicas}
+          adopcionUrgente={mascota.adopcionUrgente}
         />
       ))}
     </div>
@@ -39,7 +40,8 @@ ListaMascotas.propTypes = {
       caracteristicas: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.string),
         PropTypes.string
-      ])
+      ]),
+      adopcionUrgente: PropTypes.bool
     })
   ).isRequired
 };

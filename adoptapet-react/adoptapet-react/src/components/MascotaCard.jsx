@@ -7,7 +7,8 @@ const MascotaCard = ({
   edad,
   especie,
   descripcion,
-  caracteristicas
+  caracteristicas,
+  adopcionUrgente
 }) => {
   // Mapeo de estilos por especie
   const especieEstilos = {
@@ -82,7 +83,14 @@ const MascotaCard = ({
     : caracteristicas?.split(',').map(c => c.trim()).filter(Boolean) || [];
 
   return (
-    <div className={`mascota-card ${estilo.clase}`}>
+    <div className={`mascota-card ${estilo.clase} ${adopcionUrgente ? 'mascota-card--urgente' : ''}`}>
+      {/* Badge de adopción urgente */}
+      {adopcionUrgente && (
+        <div className="mascota-card__urgente-badge">
+          🚨 ¡ADOPCIÓN URGENTE!
+        </div>
+      )}
+
       {/* Encabezado con etiqueta de especie */}
       <div className="mascota-card__header">
         <span className="mascota-card__badge" style={{ backgroundColor: estilo.color }}>
@@ -142,12 +150,14 @@ MascotaCard.propTypes = {
   caracteristicas: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.string
-  ])
+  ]),
+  adopcionUrgente: PropTypes.bool
 };
 
 MascotaCard.defaultProps = {
   descripcion: 'No hay descripción disponible',
-  caracteristicas: []
+  caracteristicas: [],
+  adopcionUrgente: false
 };
 
 export default MascotaCard;
