@@ -1,4 +1,4 @@
-import MascotaCard from './components/MascotaCard'
+import ListaMascotas from './components/ListaMascotas'
 import { mascotas } from './data/mascotas'
 import './App.css'
 
@@ -11,19 +11,7 @@ function App() {
       </header>
 
       <main className="app-main">
-        <div className="mascotas-grid">
-          {mascotas.map(mascota => (
-            <MascotaCard
-              key={mascota.id}
-              nombre={mascota.nombre}
-              raza={mascota.raza}
-              edad={mascota.edad}
-              especie={mascota.especie}
-              descripcion={mascota.descripcion}
-              caracteristicas={mascota.caracteristicas}
-            />
-          ))}
-        </div>
+        <ListaMascotas mascotas={mascotas} />
       </main>
 
       <footer className="app-footer">
