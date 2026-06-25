@@ -80,6 +80,86 @@ body {
   }
 }
 
+/* Contenedor de filtros */
+.filtros-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* Contenedor de búsqueda */
+.busqueda-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.busqueda-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.busqueda-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.busqueda-input:hover {
+  border-color: var(--primary-color);
+}
+
+.busqueda-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.busqueda-input::placeholder {
+  color: #999;
+}
+
+/* Información de resultados */
+.resultados-info {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+/* Sección de no resultados */
+.no-resultados {
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-resultados-mensaje {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.no-resultados-sugerencia {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
 /* Footer */
 .app-footer {
   background-color: #333;
@@ -99,6 +179,10 @@ body {
   .mascotas-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: calc(var(--spacing-unit) * 2);
+  }
+
+  .filtros-container {
+    gap: 12px;
   }
 }
 
@@ -124,5 +208,31 @@ body {
   .mascotas-grid {
     grid-template-columns: 1fr;
     gap: calc(var(--spacing-unit) * 1.5);
+  }
+
+  .filtros-container {
+    gap: 10px;
+  }
+
+  .busqueda-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .busqueda-input {
+    width: 100%;
+  }
+
+  .no-resultados {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .no-resultados-mensaje {
+    font-size: 1.2rem;
+  }
+
+  .no-resultados-sugerencia {
+    font-size: 0.9rem;
   }
 }
