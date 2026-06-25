@@ -1,0 +1,12 @@
+Prompt: el componente src/components/MascotaCard.jsx recibe por props:nombre, raza, edad, especie, descripcion y caracteristicas. Muestra esta informacion de manera ordenada y visual en la pagina ademas de aplicar un estilo diferenciado segun la especie por ejemplo un color o tag por cada uno.Define los tipos de props con PropTypes y entrega valores por defecto para evitar errores cuando falte un dato.renderiza el texto siempre como contenido jsx normal, No uses dangerouslySetInnerHTML.Finalmente no dejes credenciales claves no datos sensibles en el codigo en caso de haber alguno
+El codigo proporcionado cumplio exactamente con lo solcitado,
+No se modificó ya que cumplio sin errores
+Promp2:ahora crea src/components/ListaMascotas.jsx que recibe el array de mascotas por props, recorre el array con .map() y renderiza un mascota Card por cada mascota luego aasigna correctamente la prop key usando el id de cada elemento sin usar el inidice del array finalmente en app jsx renderiza ListaMascotas pasandole los datos importados
+El codigo proporcionado cumplio con lo solcitado
+No se modificó ya que cumplio sin errores
+Promp3:crea src/components/FiltroEspecie.jsx con un selector para filtrar por la especie , en app.jsx usa useStatepara guardar el filtero y un campo de busqueda por nombre, aplica ambos filtros sobre el array antes de pasarlo a ListaMascotas y finalmente usa renderizado conidicional para mostar el mensaje "NO hay mascotas que coincidan cuando el resultado quede vacio". El campo de debe ser un componente controlado, valida y normaliza el texto de busqueda antes de usarlo evitar errores que pueda haber en la estradad del usuario
+El codigo proporcionado cumplio con el filtro por especie y validacion de datos de entrada del usuario
+No se modificó ya que cumplio sin errores
+Promp4:resalta los elementos con adopcionurgente:true visualmente con una etiqueta o colores llamativos, agrega un contador que muestre cuantas mascotas tienen adopcion urgente . verifica toda la app para que corra sin ningun error ni advertencia en la consola.
+El codigo proporcionado cumplio con la adicion de diferenciacion de los casos de adopcion urgente
+No se modificó ya que cumplio sin errores
