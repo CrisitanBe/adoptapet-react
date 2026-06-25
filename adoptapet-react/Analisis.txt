@@ -1,0 +1,11 @@
+Componente
+JSX
+Props
+Estado(useState)
+Renderizado de listas(.map+key)
+Renderizado condicional
+
+
+Que ventaja tiene dividir el directorio en componentes en lugar de escribir todoen un solo archivo
+
+Que diferencia hay entre props y estado en tu solución.Con ejemplo 
