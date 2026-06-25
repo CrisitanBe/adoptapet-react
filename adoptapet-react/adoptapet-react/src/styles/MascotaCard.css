@@ -1,0 +1,234 @@
+/* MascotaCard - Estilos base */
+.mascota-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #ccc;
+}
+
+.mascota-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado con badge */
+.mascota-card__header {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mascota-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Contenido principal */
+.mascota-card__content {
+  padding: 20px 16px;
+}
+
+.mascota-card__nombre {
+  margin: 0 0 12px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Información básica */
+.mascota-card__info-basica {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.info-valor {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Descripción */
+.mascota-card__descripcion {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 3px solid #e0e0e0;
+}
+
+.mascota-card__descripcion p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Características */
+.mascota-card__caracteristicas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.caracteristicas-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.caracteristicas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.caracteristica-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #e8e8e8;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Estilos específicos por especie */
+
+/* PERRO */
+.mascota-card--perro {
+  border-left-color: #8B4513;
+}
+
+.mascota-card--perro .mascota-card__badge {
+  background-color: #8B4513;
+}
+
+.mascota-card--perro .caracteristica-tag {
+  background-color: #D2B48C;
+  color: #5C2E0F;
+}
+
+/* GATO */
+.mascota-card--gato {
+  border-left-color: #FF8C00;
+}
+
+.mascota-card--gato .mascota-card__badge {
+  background-color: #FF8C00;
+}
+
+.mascota-card--gato .caracteristica-tag {
+  background-color: #FFD699;
+  color: #663300;
+}
+
+/* PÁJARO */
+.mascota-card--pajaro {
+  border-left-color: #FFD700;
+}
+
+.mascota-card--pajaro .mascota-card__badge {
+  background-color: #FFD700;
+  color: #333;
+}
+
+.mascota-card--pajaro .caracteristica-tag {
+  background-color: #FFF8DC;
+  color: #8B7500;
+}
+
+/* CONEJO */
+.mascota-card--conejo {
+  border-left-color: #FFB6C1;
+}
+
+.mascota-card--conejo .mascota-card__badge {
+  background-color: #FFB6C1;
+  color: #333;
+}
+
+.mascota-card--conejo .caracteristica-tag {
+  background-color: #FFE4E1;
+  color: #8B4789;
+}
+
+/* HÁMSTER */
+.mascota-card--hamster {
+  border-left-color: #A0522D;
+}
+
+.mascota-card--hamster .mascota-card__badge {
+  background-color: #A0522D;
+}
+
+.mascota-card--hamster .caracteristica-tag {
+  background-color: #D2A696;
+  color: #5C2E0F;
+}
+
+/* OTRO */
+.mascota-card--otro {
+  border-left-color: #696969;
+}
+
+.mascota-card--otro .mascota-card__badge {
+  background-color: #696969;
+}
+
+.mascota-card--otro .caracteristica-tag {
+  background-color: #C0C0C0;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .mascota-card__info-basica {
+    grid-template-columns: 1fr;
+  }
+
+  .mascota-card__nombre {
+    font-size: 1.25rem;
+  }
+
+  .caracteristicas-lista {
+    gap: 6px;
+  }
+
+  .caracteristica-tag {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
